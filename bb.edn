@@ -15,4 +15,5 @@
          tag    tasks.version/tag
          ext    tasks.build/extensions
          pkg    tasks.package/all
-         deploy tasks.deploy/all}}
+         deploy tasks.deploy/all
+         deploy-jar tasks.deploy/deploy-clojars}}

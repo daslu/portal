@@ -2,7 +2,7 @@
   (:require [clojure.java.shell :refer [sh]]
             [clojure.string :as str]))
 
-(def version "0.46.0")
+(def version "0.46.0-experimental")
 
 (defn git-hash []
   (str/trim (:out (sh "git" "rev-parse" "HEAD"))))
@@ -24,16 +24,16 @@
 
 (def options
   {:lib           'djblue/portal
-   :description   "A clojure tool to navigate through your data."
+   :description   "An in official experiment with the Portal tool"
    :version       version
-   :url           "https://github.com/djblue/portal"
+   :url           "https://github.com/daslu/portal"
    :src-dirs      ["src"]
    :resource-dirs ["resources"]
    :jar-file      (str "./target/portal-" version ".jar")
    :class-dir     "target/classes"
    :repos         {"clojars" {:url "https://repo.clojars.org/"}}
    :scm           {:tag (git-hash)
-                   :url "https://github.com/djblue/portal"}
+                   :url "https://github.com/daslu/portal"}
    :license
    {:name "MIT License"
     :url  "https://opensource.org/licenses/MIT"}
