@@ -23,7 +23,7 @@
      (provided (get-in deps [:aliases :plk :extra-deps])))))
 
 (def options
-  {:lib           'daslu/portal-experimental
+  {:lib           'daslu/portal
    :description   "An in official experiment with the Portal tool"
    :version       version
    :url           "https://github.com/daslu/portal"
