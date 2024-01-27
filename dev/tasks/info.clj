@@ -2,7 +2,7 @@
   (:require [clojure.java.shell :refer [sh]]
             [clojure.string :as str]))
 
-(def version "0.51.1")
+(def version "0.51.1-temporary-2b2a18e")
 
 (defn git-hash []
   (str/trim (:out (sh "git" "rev-parse" "HEAD"))))
@@ -23,17 +23,17 @@
      (provided (get-in deps [:aliases :plk :extra-deps])))))
 
 (def options
-  {:lib           'djblue/portal
-   :description   "A clojure tool to navigate through your data."
+  {:lib           'org.clojars.daslu/portal
+   :description   "Temporary build - A clojure tool to navigate through your data."
    :version       version
-   :url           "https://github.com/djblue/portal"
+   :url           "https://github.com/daslu/portal"
    :src-dirs      ["src"]
    :resource-dirs ["resources"]
    :jar-file      (str "./target/portal-" version ".jar")
    :class-dir     "target/classes"
    :repos         {"clojars" {:url "https://repo.clojars.org/"}}
    :scm           {:tag (git-hash)
-                   :url "https://github.com/djblue/portal"}
+                   :url "https://github.com/daslu/portal"}
    :license
    {:name "MIT License"
     :url  "https://opensource.org/licenses/MIT"}
